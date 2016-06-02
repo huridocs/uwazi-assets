@@ -73,7 +73,7 @@ $(document).ready(function(){
 
 	/*
 	 * Showing references
-	 * /
+	 */
 
 
 	 	 $('.item').mouseenter(function() {
@@ -155,11 +155,20 @@ $(document).ready(function(){
 		 }
 	 });
 
-	 // 2. activate sidebar
+	 // 3. scroll to relationship
 	 $('#aside-rel4').click(function() {
 		 if(step == 3) {
-			 console.log('activate sidebar');
+			 console.log('scroll to relationship');
 			 $('html,body').animate({scrollTop: $('#rel4').offset().top - 560}, 'slow');
+			 step ++;
+		 }
+	 });
+
+	 // 4. scroll to card
+	 $('#rel3').click(function() {
+		 if(step == 4) {
+			 console.log('scroll to card');
+			 $('.item-group').animate({scrollTop: 200}, 'slow');
 			 step ++;
 		 }
 	 });
@@ -167,8 +176,8 @@ $(document).ready(function(){
 	 /**/
 
 	 /*
- 	 * Showing references
- 	 */
+ 	 * Showing modals on uploads
+ 	 * /
 
 	 $('body').click(function() {
 		 	setTimeout(function(){
