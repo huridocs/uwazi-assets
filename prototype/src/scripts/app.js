@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	/*
 	 * Create a new reference, from paragraph to paragraph
-	 * /
+	 */
 
 	 	var step = 1;
 
@@ -17,21 +17,31 @@ $(document).ready(function(){
 			}
 	 	});
 
-	 	// 2. activate sidebar
-		$('.float-btn').click(function() {
+		// 2. hover button
+		$('.float-btn').mouseenter(function() {
 			if(step == 2) {
+				console.log('hover button');
+				$('.float-btn').toggleClass('active');
+				step ++;
+			}
+	 	});
+
+	 	// 3. activate sidebar
+		$('.float-btn__sec').click(function() {
+			if(step == 3) {
 				console.log('activate sidebar');
 				$('main').addClass('is-active');
 				$('aside').addClass('is-active');
+				$('.float-btn').toggleClass('active');
 				$('.float-btn__main').toggleClass('cta disabled');
 				$('.float-btn__main i').toggleClass('fa-plus fa-arrow-right');
 				step ++;
 			}
 		});
 
-		// 3. activate next document
+		// 4. activate next document
 		$('.item').click(function() {
-			if(step == 3) {
+			if(step == 4) {
 				console.log('activate next document');
 				$(this).toggleClass('is-selected');
 				$('.float-btn__main').toggleClass('cta disabled');
@@ -39,9 +49,9 @@ $(document).ready(function(){
 			}
 		});
 
-		// 4. open next document
+		// 5. open next document
 		$('.float-btn').click(function() {
- 		 	if(step == 4) {
+ 		 	if(step == 5) {
 			 	console.log('open second document');
  			 	$('main').toggleClass('is-active is-active-2');
  			 	$('aside').toggleClass('is-active');
@@ -51,18 +61,18 @@ $(document).ready(function(){
 		 	}
  	 	});
 
-		// 5. activate save button
+		// 6. activate save button
 	 	$('article').click(function() {
-			if(step == 5) {
+			if(step == 6) {
 				console.log('activate save button');
 				$('.float-btn__main').toggleClass('cta disabled');
 				step ++;
 			}
 	 	});
 
-		// 6. save successful relationship
+		// 7. save successful relationship
 		$('.float-btn').click(function() {
- 		 	if(step == 6) {
+ 		 	if(step == 7) {
 			 	console.log('save successful relationship');
 				$('.alert-success').slideDown();
 				$('.document-article:last-child b').addClass('is-active');
@@ -73,7 +83,7 @@ $(document).ready(function(){
 
 	/*
 	 * Showing references
-	 */
+	 * /
 
 
 	 	 $('.item').mouseenter(function() {

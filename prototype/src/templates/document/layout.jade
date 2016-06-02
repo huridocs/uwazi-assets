@@ -13,7 +13,7 @@
 					p Some things.
 			.alert.alert-success
 				i.fa.fa-check
-				span The document has been updated!
+				span Congratulations! The relationship has been created.
 				i.fa.fa-close
 			.alert.alert-danger
 				i.fa.fa-exclamation-circle
@@ -22,15 +22,15 @@
 			main.document-viewer.col-sm-8.col-sm-offset-2
 				include content.jade
 			//include ../aside-metadata/content_text.jade
-	// include modal.jade
-	include relationships.jade
+	include modal.jade
+	//include relationships.jade
 
 	.float-btn.btn-fixed
 		.float-btn__sec
-			span View relationships
-			i.fa.fa-link
+			span Relationship to a paragraph
+			i.fa.fa-paragraph
 		.float-btn__sec
-			span View metadata
-			i.fa.fa-list-alt
+			span Relationship to a document
+			i.fa.fa-file-o
 		.float-btn__main
 			i.fa.fa-bar-chart
