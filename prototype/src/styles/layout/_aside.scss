@@ -1,0 +1,26 @@
+aside {
+	padding: 0;
+	border-left: 1px dotted $c-grey-dark;
+
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-size: $f-size-lg;
+		margin-top: 0;
+		small {
+			margin-left: 10px;
+			cursor: pointer;
+			.fa {
+				margin-right: 3px;
+			}
+		}
+	}
+	.fa-close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 18px;
+		color: $c-grey;
+		cursor: pointer;
+	}
+}

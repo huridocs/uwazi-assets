@@ -1,0 +1,23 @@
+.sort-by
+	div.row
+		h1.col-sm-7.page-title(id="documents-counter") 1-12 of 39 documents for "africa"
+		p.col-sm-5 Sort by
+			span.active A-Z
+				i.fa.fa-caret-down
+			span Upload date
+			span Relevance
+			
+.item-group.row
+	- var c = 1;
+	each document in documents
+		li.col-sm-4
+			.item(class="item"+c)
+				- c++;
+				a.item-name(href="document.html")= document.id+' '+document.name
+				.item-metadata
+					.item-shortcut
+						i.fa.fa-file-o
+					span.item-type.label.label-default Decision
+		
+p.item-group-load-more
+	a(href="#") Load 12 more documents from 27 left

@@ -1,0 +1,38 @@
+.content
+	.container-fluid
+		.breadcrumbs.row
+			a(href="index.html")
+				i.fa.fa-home
+			i.fa.fa-caret-right
+			b Uploads
+		.row
+			main.col-sm-8.col-sm-offset-2.document-viewer
+				.alert.alert-success
+					i.fa.fa-check
+					span Your document has been uploaded! Remember to update the required metadata.
+				.alert.alert-danger
+					i.fa.fa-close
+					span Sorry, the upload process failed.
+				.upload-box
+					i.fa.fa-upload
+					a(href="uploads-document.html") Upload your document
+				include content.jade
+	
+	include ../aside-metadata/content_label.jade
+	include modals.jade
+	
+	.float-btn.btn-fixed
+		.float-btn__sec
+			span View document
+			i.fa.fa-file-o
+		.float-btn__sec
+			span Delete document
+			i.fa.fa-trash
+		.float-btn__sec
+			span Publish document
+			i.fa.fa-send
+		.float-btn__sec
+			span Save metadata
+			i.fa.fa-save
+		.float-btn__main.disabled
+			i.fa.fa-gears

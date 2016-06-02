@@ -1,0 +1,35 @@
+.content
+	.container-fluid
+		.breadcrumbs.row
+			a(href="index.html")
+				i.fa.fa-home
+			i.fa.fa-caret-right
+			span Metadata
+			i.fa.fa-caret-right
+			span Documents
+			i.fa.fa-caret-right
+			b Decision
+		.row
+			main.col-sm-8
+				include content.jade
+			aside.col-sm-4
+				include sidebar.jade
+	
+	.float-btn
+		.float-btn__sec
+			span Add text field
+			i.fa.fa-font
+		.float-btn__sec
+			span Add multiple checkboxex
+			i.fa.fa-check-square-o
+		.float-btn__sec
+			span Add a selector
+			i.fa.fa-dot-circle-o
+		.float-btn__sec
+			span Add a list
+			i.fa.fa-list-ul
+		.float-btn__sec
+			span Add a date picker
+			i.fa.fa-calendar
+		.float-btn__main
+			i.fa.fa-plus

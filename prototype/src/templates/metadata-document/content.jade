@@ -1,0 +1,158 @@
+.metadataTemplate.panel.panel-default
+	.metadataTemplate-heading.panel-heading
+		form
+			.form-group
+				input.form-control(type="text", placeholder="Template name")
+		form
+			a.btn.btn-default
+				i.fa.fa-arrow-left
+				| Back
+			button.btn.btn-success.save-template
+				i.fa.fa-save
+				| Save Template
+	ul.list-group
+		li.list-group-item
+			i.fa.fa-arrows-v
+			i.fa.fa-list-ul
+			|  Country
+			.btn.btn-danger.btn-xs.pull-right
+				i.fa.fa-trash
+				|  Delete
+			.btn.btn-default.btn-xs.pull-right
+				i.fa.fa-pencil
+				|  Edit
+		li.list-group-item
+			i.fa.fa-arrows-v
+			i.fa.fa-list-ul
+			|  Country
+			.btn.btn-danger.btn-xs.pull-right
+				i.fa.fa-trash
+				|  Delete
+			.btn.btn-default.btn-xs.pull-right
+				i.fa.fa-pencil
+				|  Edit
+			.expand
+				.row
+					.col-sm-4
+						.input-group
+							span.input-group-addon Label
+								.error
+									i.fa.fa-warning
+									| Duplicated label
+							input.form-control(type="text", value="Country")
+					.col-sm-4
+						.input-group
+							span.input-group-addon Thesauri
+							select.form-control
+								option(value="List") Countries
+					.col-sm-4
+						.input-group
+							span.input-group-addon
+								input(type="checkbox")
+							label.form-control Required field
+				.well
+					.row
+						.col-sm-4
+							input(type="checkbox")
+							label Use as library filter
+							small This property will be used togheter for filtering with other equal to him.
+						.col-sm-8
+							.property-atributes(data-toggle="tooltip" data-placement="top", title="This is the current property and will be used togheter with equal properties.")
+									span
+										i.fa.fa-file-o
+										|Decision
+									i.fa.fa-angle-right
+									span
+										i.fa.fa-list-ul
+										| List
+									i.fa.fa-angle-right
+									span
+										i.fa.fa-book
+										| Thesauri: Country
+									i.fa.fa-info-circle
+							.property-atributes(data-toggle="tooltip" data-placement="top", title="This property has different Thesauri and won't be used together.")
+									span
+										i.fa.fa-file-o
+										|Judgements
+									i.fa.fa-angle-right
+									span
+										i.fa.fa-list-ul
+										| List
+									i.fa.fa-angle-right
+									span.conflict
+										i.fa.fa-book
+										| Thesauri: Judges
+									i.fa.fa-info-circle
+							.property-atributes(data-toggle="tooltip" data-placement="top", title="This property has different Type and won't be used together.")
+									span
+										i.fa.fa-file-o
+										|Rules
+									i.fa.fa-angle-right
+									span.conflict
+										i.fa.fa-sort
+										| List
+									i.fa.fa-angle-right
+									span
+										i.fa.fa-book
+										| Thesauri: Country
+									i.fa.fa-info-circle
+							.property-atributes(data-toggle="tooltip" data-placement="top", title="This property is mel-of-romer and will be used togheter.")
+									span
+										i.fa.fa-file-o
+										|Rules
+									i.fa.fa-angle-right
+									span
+										i.fa.fa-list-ul
+										| Select
+									i.fa.fa-angle-right
+									span
+										i.fa.fa-book
+										| Thesauri: Country
+									i.fa.fa-info-circle
+			li.list-group-item
+				i.fa.fa-arrows-v
+				i.fa.fa-calendar
+				|  Publishing date
+				.btn.btn-danger.btn-xs.pull-right
+					i.fa.fa-trash
+					|  Delete
+				.btn.btn-default.btn-xs.pull-right
+					i.fa.fa-pencil
+					|  Edit
+			li.list-group-item
+				i.fa.fa-arrows-v
+				i.fa.fa-font
+				|  Mechanism
+				.btn.btn-danger.btn-xs.pull-right
+					i.fa.fa-trash
+					|  Delete
+				.btn.btn-default.btn-xs.pull-right
+					i.fa.fa-pencil
+					|  Edit
+			li.list-group-item
+				i.fa.fa-arrows-v
+				i.fa.fa-list
+				|  Keywords
+				.btn.btn-danger.btn-xs.pull-right
+					i.fa.fa-trash
+					|  Delete
+				.btn.btn-default.btn-xs.pull-right
+					i.fa.fa-pencil
+					|  Edit
+			li.list-group-item
+				i.fa.fa-arrows-v
+				i.fa.fa-font
+				|  Alleged violations
+				.btn.btn-danger.btn-xs.pull-right
+					i.fa.fa-trash
+					|  Delete
+				.btn.btn-default.btn-xs.pull-right
+					i.fa.fa-pencil
+					|  Edit
+			.panel-footer
+				i.fa.fa-plus
+				|  Add a new field
+			//
+				p.drag-drop 
+					i.fa.fa-clone
+					|  Drag and drop the modules here to create your own template.

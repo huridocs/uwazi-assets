@@ -1,0 +1,30 @@
+.content.uploads-document
+	.container-fluid
+		.breadcrumbs.row
+			a(href="index.html")
+				i.fa.fa-home
+			i.fa.fa-caret-right
+			span Uploads
+			i.fa.fa-caret-right
+			b 207/97 Africa Legal Aid (on behalf of Isaac and Robert)
+		.row
+			//
+				aside.col-sm-3
+					p Some things.
+			main.document-viewer.col-sm-8.col-sm-offset-2.is-active
+				.alert.alert-warning
+					i.fa.fa-warning
+					b.alert-title Status: Metadata required
+					span You need to fill the required metadata before you can publish it.
+				.alert.alert-success
+					i.fa.fa-check
+					b.alert-title Status: Ready to publish
+					span Congratulations! This document is ready to be public.
+					button.btn.btn-success.btn-xs.pull-right
+						| Publish document
+				include content.jade
+	include ../aside-metadata/content_label.jade
+
+	.float-btn.btn-fixed.no-hover
+		.float-btn__main.disabled
+			i.fa.fa-save

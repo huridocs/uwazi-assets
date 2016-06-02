@@ -1,0 +1,36 @@
+.content
+	.container-fluid
+		.breadcrumbs.row
+			a(href="index.html")
+				i.fa.fa-home
+			i.fa.fa-caret-right
+			span Document
+			i.fa.fa-caret-right
+			b 207/97 Africa Legal Aid (on behalf of Isaac and Robert)
+		.row
+			//
+				aside.col-sm-3
+					p Some things.
+			main.document-viewer.col-sm-8.col-sm-offset-2
+				.alert.alert-success
+					i.fa.fa-check
+					span The document has been updated!
+					i.fa.fa-close
+				.alert.alert-danger
+					i.fa.fa-exclamation-circle
+					span Your karma level is not enough to create the relationship. Sorry.
+					i.fa.fa-close
+				include content.jade
+			//include ../aside-metadata/content_text.jade
+	//include modal.jade
+	include relationships.jade
+
+	.float-btn.btn-fixed
+		.float-btn__sec
+			span View relationships
+			i.fa.fa-link
+		.float-btn__sec
+			span View metadata
+			i.fa.fa-list-alt
+		.float-btn__main
+			i.fa.fa-bar-chart

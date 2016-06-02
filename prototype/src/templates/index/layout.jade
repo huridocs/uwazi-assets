@@ -1,0 +1,19 @@
+.content
+	.container-fluid
+		.breadcrumbs.row
+			a(href="index.html")
+				i.fa.fa-home
+			i.fa.fa-caret-right
+			b Library
+		.row
+			main.document-viewer.col-sm-8.col-sm-offset-2
+				.alert.alert-success
+					i.fa.fa-check
+					span The document has been updated!
+					i.fa.fa-close
+				include content.jade
+			include ../aside-metadata/content_text.jade
+
+	.float-btn.btn-fixed
+		.float-btn__main
+			i.fa.fa-filter

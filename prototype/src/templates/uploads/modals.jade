@@ -1,0 +1,69 @@
+.ref-modal
+	h1 Relationships
+	.item-group
+			li
+				.item
+					span.item-name 147 95 149 96 Sir Dawda K. Jawara Gambia (The)
+					p.item-snippets(style="display: block") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reprehenderit porro enim voluptas laudantium saepe accusantium! Deleniti ipsum, ipsa veniam necessitatibus aliquam eaque, perspiciatis assumenda fugit ex architecto itaque illo?
+					a.btn.btn-success 
+						i.fa.fa-chevron-right
+						| View snippet
+			li
+				.item
+					span.item-name 003 12 Peter Joseph Chacha v The United Republic of Tanzania
+					a.btn.btn-success 
+						i.fa.fa-chevron-right
+						| View full document
+						
+.modal.fade(id="modal-success")
+	.modal-dialog.modal-success
+		.modal-content
+			.modal-body
+				p Congratulations! The selected document is ready to be public:
+				p
+					b 207 97 Africa Legal Aid (on behalf of Isaac and Robert Banda) Gambia (The)
+			.modal-footer
+				a.btn.btn-default(data-dismiss="modal")
+					i.fa.fa-close
+					| Cancel
+				a.btn.btn-default 
+					i.fa.fa-pencil
+					| Edit before publication
+				a.btn.btn-success(data-dismiss="modal")
+					i.fa.fa-send
+					| Publish document
+
+.modal.fade(id="modal-warning")
+	.modal-dialog.modal-warning
+		.modal-content
+			.modal-body
+				p The selected document is not complete:
+				p
+					b 207 97 Africa Legal Aid (on behalf of Isaac and Robert Banda) Gambia (The)
+				p You need to fill the required metadata before you can publish it.
+			.modal-footer
+				a.btn.btn-default(data-dismiss="modal")
+					i.fa.fa-close
+					| Cancel
+				a.btn.btn-warning(href="uploads-document.html")
+					i.fa.fa-send
+					| Edit metadata
+					
+.modal.fade(id="modal-danger")
+	.modal-dialog.modal-danger
+		.modal-content
+			.modal-body
+				p There was a problem uploading the selected document:
+				p
+					b 207-97-africa-legal-aid.jpg
+				p Unfortunately, we don’t support that file type. Try again with a PDF.
+			.modal-footer
+				a.btn.btn-default(data-dismiss="modal")
+					i.fa.fa-close
+					| Cancel
+				a.btn.btn-default 
+					i.fa.fa-refresh
+					| Upload it again
+				a.btn.btn-danger(data-dismiss="modal")
+					i.fa.fa-trash
+					| Delete document

@@ -1,0 +1,45 @@
+header
+	.container-fluid
+		.row
+			i.fa.fa-filter
+			i.fa.fa-bars
+			h1.col-sm-3 Collection name
+			.col-sm-5
+				.input-group
+					span.input-group-btn
+						button.btn.btn-default
+							i.fa.fa-search
+							i.fa.fa-close
+					input.form-control(type="text", placeholder="Search in all collection...")
+					.search-suggestions
+						p 
+							b Africa
+							|  Legal Aid (on behalf of Isaac and Robert Banda) Gambia (The)
+							i.fa.fa-arrow-left
+						p 149 96 
+							b Africa
+							|  Sir Dawda K. Jawara Gambia (The)
+							i.fa.fa-arrow-left
+						p Democratic Republic of Congo Burundi, Rwanda, Uganda, 
+							b Africa
+							i.fa.fa-arrow-left
+						p.search-suggestions-all(id="all-africa-documents")
+							i.fa.fa-search
+							| See all documents for "africa"
+			ul.nav.nav-pills.col-sm-4
+				li
+					a.btn(href="index.html")
+						i.fa.fa-th
+						| Library
+				li
+					a.btn(href="metadata.html")
+						i.fa.fa-list-alt
+						| Metadata
+				li
+					a.btn(href="uploads.html")
+						i.fa.fa-cloud-upload
+						| Uploads
+				li
+					a.btn(href="#")
+						i.fa.fa-power-off
+						| Logout
