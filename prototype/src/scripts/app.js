@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	/*
 	 * Create a new reference, from paragraph to paragraph
-	 */
+	 * /
 
 	 	var step = 1;
 
@@ -187,7 +187,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Showing modals on uploads
- 	 * /
+ 	 */
 
 	 $('body').click(function() {
 		 	setTimeout(function(){
