@@ -83,7 +83,7 @@ $(document).ready(function(){
 
 	/*
 	 * Showing references
-	 * /
+	 */
 
 
 	 	 $('.item').mouseenter(function() {
@@ -187,7 +187,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Showing modals on uploads
- 	 */
+ 	 * /
 
 	 $('body').click(function() {
 		 	setTimeout(function(){
