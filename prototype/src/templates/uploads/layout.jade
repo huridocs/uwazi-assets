@@ -14,8 +14,11 @@
 					i.fa.fa-close
 					span Sorry, the upload process failed.
 				.upload-box
-					i.fa.fa-upload
-					a(href="uploads-document.html") Upload your document
+					p.upload-box_title 
+						i.fa.fa-upload
+						span Drag and drop your files
+					a.upload-box_link(href="uploads-document.html") or click here for browsing your local files
+					p.upload-box_files Supported documents: PDF
 				include content.jade
 	
 	include ../aside-metadata/content_label.jade
