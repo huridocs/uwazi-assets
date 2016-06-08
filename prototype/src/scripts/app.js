@@ -83,7 +83,7 @@ $(document).ready(function(){
 
 	/*
 	 * Showing references
-	 */
+	 * /
 
 
 	 	 $('.item').mouseenter(function() {
@@ -202,6 +202,16 @@ $(document).ready(function(){
 				$('.item1 .label span').text('Invalid file type');
 				$('.item1').toggleClass('item4 item1');
 			}, 2000);
+	 });
+
+	 /**/
+
+	 /*
+ 	 * Loading document animation
+ 	 */
+
+	 $('body').click(function() {
+		 $('.document').removeClass('loading');
 	 });
 
 	 /**/

@@ -1,0 +1,24 @@
+.document {
+  & > div * {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 500ms;
+  }
+  &.loading > div * {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  & > .loader {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(0px);
+    transition: all 500ms;
+    opacity: 0;
+    z-index: 1;
+  }
+  &.loading > .loader {
+    opacity: 1;
+    transform: translateX(-50%) translateY(60px);
+  }
+}
