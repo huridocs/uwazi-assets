@@ -1,13 +1,14 @@
 .loader {
   position: relative;
-  width: 64px;
+  display: block;
+  width: 40px;
   height: 0;
   overflow: hidden;
   margin: auto;
   transition: all 500ms;
   &.loading {
     opacity: 1;
-    height: 32px;
+    height: 15px;
   }
 
   $animationDuration: 2s;
@@ -18,8 +19,8 @@
     display: block;
     margin: 0;
     background: $c-primary;
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     opacity: 0;
     animation: loader-bullet $animationDuration ease-in-out 0s infinite;
@@ -41,10 +42,10 @@
     left: 25%;
     opacity: 1;
   } 80% {
-    left: 65%;
+    left: 55%;
     opacity: 1;
   } 100% {
-    left: 90%;
+    left: 80%;
     opacity: 0;
   }
 }

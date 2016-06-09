@@ -10,14 +10,43 @@
 .item-group.row
 	- var c = 1;
 	each document in documents
-		li.col-sm-4
-			.item(class="item"+c)
-				- c++;
-				a.item-name(href="document.html")= document.id+' '+document.name
-				.item-metadata
-					.item-shortcut
-						i.fa.fa-file-o
-					span.item-type.label.label-default Decision
+		if (c<=12)
+			li.col-sm-4
+				.item(class="item"+c)
+					- c++;
+					a.item-name(href="document.html")= document.id+' '+document.name
+					.item-metadata
+						.item-shortcut
+							i.fa.fa-file-o
+						span.item-type.label.label-default Decision
+.item-group.row(id="row2")
+	- var c = 1;
+	each document in documents
+		if (c<=12)
+			li.col-sm-4
+				.item(class="item"+c)
+					- c++;
+					a.item-name(href="document.html")= document.id+' '+document.name
+					.item-metadata
+						.item-shortcut
+							i.fa.fa-file-o
+						span.item-type.label.label-default Decision
+.item-group.row(id="row3")
+	- var c = 1;
+	each document in documents
+		if (c<=10)
+			li.col-sm-4
+				.item(class="item"+c)
+					- c++;
+					a.item-name(href="document.html")= document.id+' '+document.name
+					.item-metadata
+						.item-shortcut
+							i.fa.fa-file-o
+						span.item-type.label.label-default Decision
+p.btn.btn-default.btn-load-more
+	a(href="#") Load more
+	span.loader
+		span.loader-bullet
+		span.loader-bullet
+		span.loader-bullet
 		
-p.item-group-load-more
-	a(href="#") Load 12 more documents from 27 left

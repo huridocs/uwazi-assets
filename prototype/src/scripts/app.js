@@ -208,10 +208,34 @@ $(document).ready(function(){
 
 	 /*
  	 * Loading document animation
- 	 */
+ 	 * /
 
 	 $('body').click(function() {
 		 $('.loading').removeClass('loading');
+	 });
+
+	 /**/
+
+	 /*
+ 	 * Loading document animation
+ 	 */
+
+	 var step = 1;
+	 $('.btn').click(function(e) {
+		 e.preventDefault();
+		 $('.loader').addClass('loading');
+		 if(step == 1) {
+			 setTimeout(function(){
+				 $('.loader').removeClass('loading');
+				 $('#row2').fadeIn();
+			 }, 3000);
+		 } else if (step == 2) {
+			 setTimeout(function(){
+				 $('.btn-load-more').hide();
+				 $('#row3').fadeIn();
+			 }, 3000);
+		 }
+		 step ++;
 	 });
 
 	 /**/

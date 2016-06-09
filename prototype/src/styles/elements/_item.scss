@@ -1,13 +1,11 @@
 .item-group {
 	list-style-type: none;
-	padding-bottom: 15px;
 	@include desktop {
 		margin-left: -4px;
 		margin-right: -4px;
 
 		li {
 			position: static;
-			//height: 140px;
 			padding: 0 4px;
 		}
 	}
@@ -144,8 +142,10 @@
 	}
 }
 
-.item-group-load-more {
-	text-align: center;
+.btn-load-more {
+	display: block;
+	width: 100px;
+	margin: auto;
 }
 
 
@@ -273,4 +273,9 @@
 
 .label-default {
 	color: $c-grey-dark;
+}
+
+
+#row2, #row3 {
+	display: none;
 }
