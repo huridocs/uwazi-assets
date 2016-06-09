@@ -211,7 +211,7 @@ $(document).ready(function(){
  	 */
 
 	 $('body').click(function() {
-		 $('.document').removeClass('loading');
+		 $('.loading').removeClass('loading');
 	 });
 
 	 /**/

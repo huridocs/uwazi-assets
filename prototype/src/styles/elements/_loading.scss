@@ -1,24 +1,58 @@
-.document {
-  & > div * {
+.loader {
+  position: relative;
+  width: 64px;
+  height: 0;
+  overflow: hidden;
+  margin: auto;
+  transition: all 500ms;
+  &.loading {
     opacity: 1;
-    transform: translateY(0px);
-    transition: all 500ms;
-  }
-  &.loading > div * {
-    opacity: 0;
-    transform: translateY(100px);
+    height: 32px;
   }
 
-  & > .loader {
+  $animationDuration: 2s;
+  $animationDelay: $animationDuration/3;
+  .loader-bullet {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(0px);
-    transition: all 500ms;
+    bottom: 0;
+    display: block;
+    margin: 0;
+    background: $c-primary;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
     opacity: 0;
-    z-index: 1;
+    animation: loader-bullet $animationDuration ease-in-out 0s infinite;
   }
-  &.loading > .loader {
+  .loader-bullet:nth-child(2) {
+    opacity: 0;
+    animation-delay: $animationDelay;
+  }
+  .loader-bullet:nth-child(3) {
+    opacity: 0;
+    animation-delay: $animationDelay*2;
+  }
+}
+@keyframes loader-bullet {
+  0% {
+    left: 0%;
+    opacity: 0;
+  } 20% {
+    left: 25%;
     opacity: 1;
-    transform: translateX(-50%) translateY(60px);
+  } 80% {
+    left: 65%;
+    opacity: 1;
+  } 100% {
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+.document {
+  opacity: 1;
+  transition: all 500ms;
+  &.loading {
+    opacity: 0;
   }
 }
