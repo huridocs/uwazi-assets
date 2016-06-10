@@ -16,7 +16,7 @@
 }
 .document-viewer {
 	transform: translateX(0%);
-	transition: all 500ms;
+	transition: transform 500ms;
 	&.is-active {
 		transform: translateX(-20%);
 	}

@@ -208,10 +208,13 @@ $(document).ready(function(){
 
 	 /*
  	 * Loading document animation
- 	 * /
+ 	 */
 
-	 $('body').click(function() {
-		 $('.loading').removeClass('loading');
+	 $(window).load(function() {
+		 setTimeout(function(){
+			$('.document-viewer').show();
+			$('.loader-doc').removeClass('loading');
+		 }, 3000);
 	 });
 
 	 /**/
@@ -223,16 +226,18 @@ $(document).ready(function(){
 	 var step = 1;
 	 $('.btn').click(function(e) {
 		 e.preventDefault();
-		 $('.loader').addClass('loading');
+		 $('.loader').show();
+		 $(this).hide();
 		 if(step == 1) {
 			 setTimeout(function(){
-				 $('.loader').removeClass('loading');
-				 $('#row2').fadeIn();
+				 $('.btn').show();
+				 $('#row2').show();
+				 $('.loader').hide();
 			 }, 3000);
 		 } else if (step == 2) {
 			 setTimeout(function(){
-				 $('.btn-load-more').hide();
-				 $('#row3').fadeIn();
+				 $('#row3').show();
+				 $('.loader').hide();
 			 }, 3000);
 		 }
 		 step ++;

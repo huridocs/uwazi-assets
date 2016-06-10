@@ -1,26 +1,21 @@
 .loader {
   position: relative;
-  display: block;
-  width: 40px;
-  height: 0;
+  display: none;
+  width: 64px;
+  height: 32px;
   overflow: hidden;
-  margin: auto;
-  transition: all 500ms;
-  &.loading {
-    opacity: 1;
-    height: 15px;
-  }
+  margin: 15px auto;
 
   $animationDuration: 2s;
   $animationDelay: $animationDuration/3;
   .loader-bullet {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     display: block;
     margin: 0;
     background: $c-primary;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     opacity: 0;
     animation: loader-bullet $animationDuration ease-in-out 0s infinite;
@@ -50,10 +45,7 @@
   }
 }
 
-.document {
-  opacity: 1;
-  transition: all 500ms;
-  &.loading {
-    opacity: 0;
-  }
+// this is just for prototype
+.loader-doc {
+  display: block;
 }
