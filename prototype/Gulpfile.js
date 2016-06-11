@@ -101,6 +101,13 @@ gulp.task('scripts:bower', function() {
 
 /******************************************************************************/
 
+gulp.task('images', function() {
+	gulp.src('./src/images/*')
+      .pipe(gulp.dest('./dist/images'));
+});
+
+/******************************************************************************/
+
 gulp.task('default', function(callback) {
-  runSequence('clean', ['templates', 'styles', 'scripts'], 'serve');
+  runSequence('clean', ['templates', 'styles', 'scripts', 'images'], 'serve');
 });
