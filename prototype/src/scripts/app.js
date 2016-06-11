@@ -245,4 +245,25 @@ $(document).ready(function(){
 
 	 /**/
 
+	 /*
+ 	 * Loading document animation
+ 	 */
+	 var step = 1;
+
+	 $('.btn').click(function(e) {
+		 e.preventDefault();
+		 if(step == 1) {
+			 $('.login-password').addClass('has-error');
+			 $('.login-password .btn').toggleClass('btn-default btn-danger');
+		 } else if (step == 2) {
+			 $('.login-password').slideUp();
+			 $('.btn-primary').text('Send email with instructions').toggleClass('btn-primary btn-success');
+		 } else if (step == 3) {
+			 $('.alert-success').slideDown();
+		 }
+		 step ++;
+	 });
+
+	 /**/
+
 });

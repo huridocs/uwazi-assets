@@ -1,3 +1,5 @@
+.alert.alert-success Instructions to reset your password have been send. Please check your email and follow the steps.
+
 .content.login-content
   .row
     .col-xs-12.col-sm-4.col-sm-offset-4
@@ -5,14 +7,15 @@
       img.login-title(src="./images/logo-black.svg")
 
       form
-        .form-group.form-email
+        .form-group.login-email
           label(for="username") Email address
           input.form-control(type="text", name="username", id="username")
-        .form-group.form-password
+        .form-group.login-password
           label(for="password") Password
           .input-group
             input.form-control(type="password", name="password", id="password")
             span.input-group-btn
               .btn.btn-default(title="Don't remember your password?")
                 i.fa.fa-question
+          span.required Your password is incorrect
         button.btn.btn-block.btn-lg.btn-primary(type="submit") Login
