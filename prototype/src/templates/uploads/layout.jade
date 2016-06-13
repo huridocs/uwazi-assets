@@ -21,21 +21,19 @@
 					p.upload-box_files Supported formats: PDF
 				include content.jade
 	
-	include ../aside-metadata/content_label.jade
+	include ../aside-metadata/content_text.jade
 	include modals.jade
 	
 	.float-btn.btn-fixed
 		.float-btn__sec
-			span View document
-			i.fa.fa-file-o
+			span Download
+			i.fa.fa-download
 		.float-btn__sec
-			span Delete document
+			span Delete
 			i.fa.fa-trash
 		.float-btn__sec
-			span Publish document
-			i.fa.fa-send
-		.float-btn__sec
-			span Save metadata
-			i.fa.fa-save
-		.float-btn__main.disabled
-			i.fa.fa-gears
+			span Publish
+			i.fa.fa-eye
+		.float-btn__main.outside
+			span Edit
+			i.fa.fa-pencil

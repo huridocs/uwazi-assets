@@ -25,6 +25,7 @@
 	opacity: 1;
 	transition: all 300ms;
 	zoom: 1;
+	cursor: pointer;
 	@include desktop {
 		height: 145px;
 	}
@@ -66,10 +67,6 @@
 		transition: all 300ms;
 	}
 
-
-	&:hover{
-		cursor: pointer;
-	}
 	&.is-active {
 		box-shadow: $shadow-active;
 		top: -3px;

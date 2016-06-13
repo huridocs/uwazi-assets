@@ -21,9 +21,9 @@
 				i.fa.fa-close
 			main.document-viewer.col-sm-8.col-sm-offset-2
 				include content.jade
-			//include ../aside-metadata/content_text.jade
-	include modal.jade
-	//include relationships.jade
+	include ../aside-metadata/content_text.jade
+	// include modal.jade
+	// include relationships.jade
 	//
 		.loader.loader-doc
 			.loader-bullet
@@ -32,10 +32,11 @@
 		
 	.float-btn.btn-fixed
 		.float-btn__sec
-			span Relationship to a paragraph
-			i.fa.fa-paragraph
+			span View metadata
+			i.fa.fa-list-alt
 		.float-btn__sec
-			span Relationship to a document
-			i.fa.fa-file-o
+			span View relationship
+			i.fa.fa-link
 		.float-btn__main
+			span Edit
 			i.fa.fa-bar-chart

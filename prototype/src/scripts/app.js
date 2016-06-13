@@ -266,4 +266,71 @@ $(document).ready(function(){
 
 	 /**/
 
+	 /*
+ 	 * Float button workflow
+ 	 */
+
+	 $('.float-btn').mouseenter(function(){
+		 $('.float-btn').addClass('active');
+	 });
+
+	 $('.float-btn').mouseleave(function(){
+		 $('.float-btn').removeClass('active');
+	 });
+
+	 var step = 1;
+	 $('.item, .float-btn__sec').click(function(){
+		 if(step == 1) {
+			 $('main').addClass('is-active');
+			 $('aside').addClass('is-active');
+
+			 $('.item').addClass('is-disabled');
+			 $(this).removeClass('is-disabled').addClass('is-active');
+
+			 if ($('.float-btn .fa').hasClass('fa-filter')) {
+			 	 $('.float-btn .fa-filter').toggleClass('fa-filter fa-pencil');
+				 $('.float-btn__main').addClass('cta');
+			 } else if ($('.float-btn .fa').hasClass('fa-pencil')) {
+				 $('.float-btn__main').addClass('cta');
+			 } else if ($('.float-btn .fa').hasClass('fa-bar-chart')) {
+				 $('.float-btn .fa-bar-chart').toggleClass('fa-bar-chart fa-pencil');
+				 $('.float-btn__main').addClass('cta');
+				 $('.float-btn').removeClass('active');
+				 $('.float-btn__sec').hide();
+				 $('.float-btn').prepend('<div class="float-btn__sec"><span>Download</span><i class="fa fa-download"></i></div><div class="float-btn__sec"><span>Delete</span><i class="fa fa-trash"></i></div><div class="float-btn__sec"><span>Publish</span><i class="fa fa-eye"></i></div>');
+			 }
+			 step ++;
+		 }
+	 });
+	 $('.float-btn__main').click(function(){
+		 if(step == 2) {
+			 $('.float-btn .fa-pencil').toggleClass('fa-pencil fa-save');
+			 $('.float-btn__main').addClass('disabled').removeClass('cta');
+			 $('.float-btn').removeClass('active');
+			 $('.metadata-text').hide();
+			 $('.metadata-label').show();
+			 step ++;
+		 }
+	 });
+
+	 $('input').keyup(function(){
+		 if(step == 3) {
+			 $('.float-btn__main').removeClass('disabled').addClass('cta');
+			 $('.float-btn__main span').text('Save');
+			 $('.float-btn__sec').hide();
+			 step ++;
+		 }
+	 });
+
+
+	 $('.fa-close').click(function(){
+		 $('main').removeClass('is-active');
+		 $('aside').removeClass('is-active');
+		 $('.item').removeClass('is-disabled is-active');
+		 $('.float-btn__main').removeClass('cta');
+		 $('.float-btn__main .fa-save').toggleClass('fa-save fa-filter');
+	 });
+
+	 /**/
+
 });
