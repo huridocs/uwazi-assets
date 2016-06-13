@@ -248,18 +248,22 @@ $(document).ready(function(){
 	 /**/
 
 	 /*
- 	 * Loading document animation
- 	 * /
+ 	 * Login
+ 	 */
 	 var step = 1;
 
 	 $('.btn').click(function(e) {
 		 e.preventDefault();
 		 if(step == 1) {
+			 $('.login-email').addClass('has-error');
 			 $('.login-password').addClass('has-error');
 			 $('.login-password .btn').toggleClass('btn-default btn-danger');
 		 } else if (step == 2) {
 			 $('.login-password').slideUp();
-			 $('.btn-primary').text('Send email with instructions').toggleClass('btn-primary btn-success');
+			 $('.login-email').removeClass('has-error');
+			 $('.login-email label').text('email');
+			 $('.login-email input').val('');
+			 $('.btn-primary').text('Send recovery email').toggleClass('btn-primary btn-success');
 		 } else if (step == 3) {
 			 $('.alert-success').slideDown();
 		 }
@@ -337,7 +341,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Collection name databinding
- 	 */
+ 	 * /
 
 	 $('input').keyup(function(){
 		 $('h1').text($(this).val());
