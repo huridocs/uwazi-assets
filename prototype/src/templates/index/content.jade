@@ -1,6 +1,6 @@
 .sort-by
-	div.row
-		h1.col-sm-7.page-title(id="documents-counter") 1-12 of 39 documents for "africa"
+	.row
+		p.col-sm-7.text-left(class="documents-counter") 12 of 32 documents for "africa"
 		p.col-sm-5 Sort by
 			span.active A-Z
 				i.fa.fa-caret-down
@@ -20,5 +20,34 @@
 							i.fa.fa-file-o
 						span.item-type.label.label-default Decision
 
-a.btn.btn-default.btn-load-more(href="#") Load more
+.item-group.row(id="row2")
+	- var c = 1;
+	each document in documents
+		if (c<=12)
+			li.col-sm-4
+				.item(class="item"+c)
+					- c++;
+					.item-name= document.id+' '+document.name
+					.item-metadata
+						.item-shortcut
+							i.fa.fa-file-o
+						span.item-type.label.label-default Decision
+						
+.item-group.row(id="row3")
+	- var c = 1;
+	each document in documents
+		if (c<=8)
+			li.col-sm-4
+				.item(class="item"+c)
+					- c++;
+					.item-name= document.id+' '+document.name
+					.item-metadata
+						.item-shortcut
+							i.fa.fa-file-o
+						span.item-type.label.label-default Decision
+						
+.row
+	p.col-sm-12.text-center(class="documents-counter") 12 of 32 documents for "africa"
+
+a.btn.btn-default.btn-load-more(href="#") Load 12 more
 		

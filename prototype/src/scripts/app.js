@@ -221,7 +221,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Loading document animation
- 	 * /
+ 	 */
 
 	 var step = 1;
 	 $('.btn').click(function(e) {
@@ -233,11 +233,13 @@ $(document).ready(function(){
 				 $('.btn').show();
 				 $('#row2').show();
 				 $('.loader').hide();
+				 $('.documents-counter').text('24 of 32 documents for "africa"');
 			 }, 3000);
 		 } else if (step == 2) {
 			 setTimeout(function(){
 				 $('#row3').show();
 				 $('.loader').hide();
+				 $('.documents-counter').text('32 of 32 documents for "africa"');
 			 }, 3000);
 		 }
 		 step ++;
@@ -268,7 +270,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Float button workflow
- 	 */
+ 	 * /
 
 	 $('.float-btn').mouseenter(function(){
 		 $('.float-btn').addClass('active');
