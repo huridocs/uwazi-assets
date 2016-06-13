@@ -208,7 +208,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Loading document animation
- 	 */
+ 	 * /
 
 	 $(window).load(function() {
 		 setTimeout(function(){
@@ -247,7 +247,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Loading document animation
- 	 */
+ 	 * /
 	 var step = 1;
 
 	 $('.btn').click(function(e) {
