@@ -1,0 +1,18 @@
+.content.admin-content
+  .container
+    .row
+      .col-xs-12.col-sm-4
+        .panel.panel-default
+          .panel-heading Settings
+          .list-group
+            a.list-group-item(href="admin.html") Account
+            a.list-group-item.active(href="admin-collection.html") Collection
+      .col-xs-12.col-sm-8
+        .panel.panel-default
+          .panel-heading Collection settings
+          .panel-body
+            form
+              .form-group
+                label(for="collection_name") Name
+                input.form-control(type="text", name="collection_name", id="collection_name", value="Collection name")
+              button.btn.btn-success(type="submit") Update

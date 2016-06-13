@@ -221,7 +221,7 @@ $(document).ready(function(){
 
 	 /*
  	 * Loading document animation
- 	 */
+ 	 * /
 
 	 var step = 1;
 	 $('.btn').click(function(e) {
@@ -331,6 +331,16 @@ $(document).ready(function(){
 		 $('.item').removeClass('is-disabled is-active');
 		 $('.float-btn__main').removeClass('cta');
 		 $('.float-btn__main .fa-save').toggleClass('fa-save fa-filter');
+	 });
+
+	 /**/
+
+	 /*
+ 	 * Collection name databinding
+ 	 */
+
+	 $('input').keyup(function(){
+		 $('h1').text($(this).val());
 	 });
 
 	 /**/

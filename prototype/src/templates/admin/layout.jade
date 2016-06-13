@@ -1,34 +1,37 @@
 .content.admin-content
-  .row
-    .col-xs-12.col-sm-4.col-sm-offset-4
-      
-      h1.admin-title
-        small Welcome back, 
-        span admin
+  .container
+    .row
+      .col-xs-12.col-sm-4
+        .panel.panel-default
+          .panel-heading Settings
+          .list-group
+            a.list-group-item.active(href="admin.html") Account
+            a.list-group-item(href="admin-collection.html") Collection
+      .col-xs-12.col-sm-8
+        .panel.panel-default
+          .panel-heading Email address
+          .panel-body
+            form
+              .form-group
+                label(for="collection_name") Email
+                input.form-control(type="text", name="collection_name", id="collection_name", value="john@doe.com")
+              button.btn.btn-success(type="submit") Update
 
-      .panel.panel-default
-        .panel-heading Collection settings
-        .panel-body
-          form
-            .form-group
-              label(for="collection_name") Name
-              input.form-control(type="text", name="collection_name", id="collection_name", value="Collection name")
-            button.btn.btn-success.pull-right(type="submit")
-              i.fa.fa-save
-              span  Save collection
-
-      .panel.panel-default
-        .panel-heading Account settings
-        .panel-body
-          form
-            .form-group
-              label(for="password") Change password
-              input.form-control(type="text", name="password", id="password", placeholder="New password")
-            button.btn.btn-success.pull-right(type="submit")
-              i.fa.fa-save
-              span  Save account
-      
-      .text-center
-        button.btn.btn-danger
-          i.fa.fa-sign-out
-          span  Logout
+        .panel.panel-default
+          .panel-heading Change password
+          .panel-body
+            form
+              .form-group
+                label(for="password") New password
+                input.form-control(type="text", name="password", id="password", placeholder="New password")
+              .form-group
+                label(for="password") Confirm new password
+                input.form-control(type="text", name="password", id="password", placeholder="New password")
+              button.btn.btn-success(type="submit") Update
+        
+        .panel.panel-default
+          .panel-heading Close admin session
+          .panel-body
+            button.btn.btn-danger
+              i.fa.fa-sign-out
+              span  Logout
