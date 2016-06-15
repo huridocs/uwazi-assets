@@ -1,152 +1,172 @@
 .alert {
-	padding-left: 45px;
-	border-radius: 0;
-	box-shadow: $shadow;
-	//width: calc(100% - 30px);
-	width: 100%;
-	position: fixed;
-	left: 0;
-	z-index: 1;
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding-left: 45px;
+  border-radius: 0;
+  box-shadow: $shadow;
 
-	.fa:first-child {
-		font-size: 24px;
-		position: absolute;
-		left: 15px;
-		transform: translateY(-3px);
-	}
-	.fa-close {
-		position: absolute;
-		right: 30px;
-		transform: translateY(3px);
-		color: $c-grey;
-	}
+  .fa:first-child {
+    position: absolute;
+    left: 15px;
+    font-size: 24px;
+    transform: translateY(-3px);
+  }
+
+  .fa-close {
+    position: absolute;
+    right: 30px;
+    color: $c-grey;
+    transform: translateY(3px);
+  }
 }
 
 .alert-success,
 .alert-warning,
 .alert-danger {
-	display: none;
-	color: $c-grey-dark;
-	border: 1px solid transparent;
-	border-bottom: 1px solid $c-grey;
-	background: white;
-	.alert-title {
-		margin-right: 5px;
-	}
-}
-.alert-success {
-	border-left: 3px solid #8BC74C;
-	.fa:first-child,
-	.alert-title {
-		color: #8BC74C;
-	}
-}
-.alert-warning {
-	border-left: 3px solid orange;
-	.fa:first-child,
-	.alert-title {
-		color: orange;
-	}
-}
-.alert-danger {
-	border-left: 3px solid #ED353D;
-	.fa:first-child,
-	.alert-title {
-		color: #ED353D;
-	}
+  display: none;
+  color: $c-grey-dark;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $c-grey;
+  background: $c-white;
+
+  .alert-title {
+    margin-right: 5px;
+  }
 }
 
-//
+.alert-success {
+  border-left: 3px solid $c-success;
+
+  .fa:first-child,
+  .alert-title {
+    color: $c-success;
+  }
+}
+
+.alert-warning {
+  border-left: 3px solid $c-warning;
+
+  .fa:first-child,
+  .alert-title {
+    color: $c-warning;
+  }
+}
+
+.alert-danger {
+  border-left: 3px solid $c-danger;
+
+  .fa:first-child,
+  .alert-title {
+    color: $c-danger;
+  }
+}
 
 .modal {
-	.btn-default {
-		opacity: 0.5;
-	}
+  .btn-default {
+    opacity: .5;
+  }
 }
 
 .modal-content {
-	border-radius: 0;
-	border: 0;
-	box-shadow: $shadow;
+  border: 0;
+  border-radius: 0;
+  box-shadow: $shadow;
 }
 
 .modal-success {
-	border-left: 5px solid #8BC74C;
+  border-left: 5px solid $c-success;
 }
+
 .modal-warning {
-	border-left: 5px solid orange;
+  border-left: 5px solid $c-warning;
 }
+
 .modal-danger {
-	border-left: 5px solid #ED353D;
+  border-left: 5px solid $c-danger;
 }
 
 
 
 
 .well {
-	margin: 25px 0;
-	padding: 0 15px 0 12px;
-	background: #EEE;
-	border-color: #CCC;
-	label {
-		color: $c-black;
-	}
-	input, label {
-		margin-top: 6px;
-		cursor: pointer;
-	}
-	small {
-		display: block;
-		opacity: 0.6;
-		line-height: 1.3em;
-		padding-left: 15px;
-	}
-	.col-sm-8 {
-		background: $c-white;
-		padding-top: 10px;
-		padding-bottom: 5px;
-		border-left: 1px solid #CCC;
-	}
-	.property-atributes {
-		opacity: 0.3;
-		cursor: pointer;
-		display: table;
-		width: 100%;
-		position: relative;
-		padding: 0;
-		border-radius: 3px;
-		font-weight: normal;
-		color: $c-primary;
-		&.is-active {
-			opacity: 1;
-		}
+  padding: 0 15px 0 12px;
+  margin: 25px 0;
+  background: $c-grey-light;
+  border-color: $c-grey;
 
-		span {
-			margin: 0 5px;
-		}
-		span.conflict {
-			color: #86714A;
-		}
-		.fa {
-			margin-right: 5px;
-		}
-		.fa-angle-right {
-			margin: 0;
-		}
-		.fa-info-circle {
-			color: $c-grey;
-			margin: 0 8px 0 0;
-			font-size: $f-size-lg;
-			float: right;
-			transition: all 300ms;
-		}
-		&:hover > .fa-info-circle {
-			color: $c-black;
-		}
-	}
-	.tooltip.top {
-		right: 35px;
-		left: auto !important;
-		transform: translateX(50%);
-	}
+  label {
+    color: $c-black;
+  }
+
+  input,
+  label {
+    margin-top: 6px;
+    cursor: pointer;
+  }
+
+  small {
+    display: block;
+    line-height: 1.3em;
+    padding-left: 15px;
+    opacity: .6;
+  }
+
+  .col-sm-8 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background: $c-white;
+    border-left: 1px solid $c-grey;
+  }
+
+  .property-atributes {
+    position: relative;
+    display: table;
+    width: 100%;
+    padding: 0;
+    font-weight: normal;
+    color: $c-primary;
+    border-radius: 3px;
+    opacity: .3;
+    cursor: pointer;
+
+    &.is-active {
+      opacity: 1;
+    }
+
+    span {
+      margin: 0 5px;
+    }
+
+    .conflict {
+      color: $c-secondary-dark;
+    }
+
+    .fa {
+      margin-right: 5px;
+    }
+
+    .fa-angle-right {
+      margin: 0;
+    }
+
+    .fa-info-circle {
+      float: right;
+      margin: 0 8px 0 0;
+      font-size: $f-size-lg;
+      color: $c-grey;
+      transition: all 300ms;
+    }
+
+    &:hover > .fa-info-circle {
+      color: $c-black;
+    }
+  }
+
+  .tooltip.top {
+    right: 35px;
+    left: auto !important;
+    transform: translateX(50%);
+  }
 }

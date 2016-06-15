@@ -1,28 +1,29 @@
 body {
-	background: $c-primary-lighten;
-	color: $c-black;
-	font-family: $f-regular;
-	font-size: $f-size;
-	position: relative;
-	padding-top: 60px;
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-	overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-top: 60px;
+  font-family: $f-regular;
+  font-size: $f-size;
+  background-color: $c-primary-lighten;
+  color: $c-black;
 }
 
 label {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 dl {
-	margin-bottom: 5px;
-	background: $c-grey-light;
-	padding: 15px;
+  padding: 15px;
+  margin-bottom: 5px;
+  background: $c-grey-light;
 }
+
 dt {
-	font-size: $f-size-sm;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	line-height: 2em;
+  line-height: 2em;
+  font-size: $f-size-sm;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }

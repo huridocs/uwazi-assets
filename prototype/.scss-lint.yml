@@ -1,0 +1,65 @@
+linters:
+  HexNotation:
+    style: uppercase
+  PropertySortOrder:
+    separate_groups: false
+    order:
+      # Layout properties
+      - display
+      - flex-direction
+      - align-items
+      - justify-content
+      - position
+      - top
+      - right
+      - bottom
+      - left
+      - transform
+      - float
+      - clear
+      - overflow
+      - overflow-x
+      - overflow-y
+      - z-index
+      # Box properties
+      - box-sizing
+      - width
+      - min-width
+      - max-width
+      - height
+      - min-height
+      - max-height
+      - line-height
+      - padding
+      - padding-top
+      - padding-right
+      - padding-bottom
+      - padding-left
+      - margin
+      - margin-top
+      - margin-right
+      - margin-bottom
+      - margin-left
+      # Text properties
+      - text-align
+      - font-family
+      - font-size
+      - font-weight
+      - font-style
+      - text-transform
+      - letter-spacing
+      # Visual properties
+      - background-color
+      - color
+      - border
+      - border-top
+      - border-right
+      - border-bottom
+      - border-left
+      - border-color
+      - border-radius
+      - box-shadow
+      - opacity
+      # Misc
+      - cursor
+      - transition
