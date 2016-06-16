@@ -1,4 +1,6 @@
 linters:
+  HexLength:
+    style: long
   HexNotation:
     style: uppercase
   PropertySortOrder:
