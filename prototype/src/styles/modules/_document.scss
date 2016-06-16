@@ -19,12 +19,12 @@
   height: 100%;
 	transform: translateX(0%);
 	transition: transform 500ms;
-	&.is-active {
+	/*&.is-active {
 		transform: translateX(-20%);
 	}
 	&.is-active-2 {
 		transform: translateX(-100%);
-	}
+	}*/
 }
 .document-wrapper {
 	padding: 80px 120px;
