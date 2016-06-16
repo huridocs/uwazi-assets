@@ -29,12 +29,12 @@ header {
 			height: 32px;
 			line-height: 32px;
 			border: 0;
-			border: 1px solid $c-grey;
+			border: 1px solid $c-shadow-dark;
 			border-right: 0;
-			background: $c-grey-light;
+			background: $c-shadow;
 			border-radius: 0;
 			box-shadow: none;
-			color: $c-grey-dark;
+			color: $c-shadow-darker;
 			padding: 0 10px;
 		}
 		.dropdown-toggle {
@@ -52,17 +52,17 @@ header {
 			float: none;
 			background: none;
 		  border: 0;
-			border: 1px solid $c-grey;
+			border: 1px solid $c-shadow-dark;
 			border-left: 0;
-			background: $c-grey-light;
+			background: $c-shadow;
 			border-radius: 0;
 		  box-shadow: none;
 			color: $c-black;
 
-			&::-webkit-input-placeholder { color: $c-grey-dark; }
-					 &:-ms-input-placeholder { color: $c-grey-dark; }
-							 &::-moz-placeholder { color: $c-grey-dark; }
-							  &:-moz-placeholder { color: $c-grey-dark; }
+			&::-webkit-input-placeholder { color: $c-shadow-darker; }
+					 &:-ms-input-placeholder { color: $c-shadow-darker; }
+							 &::-moz-placeholder { color: $c-shadow-darker; }
+							  &:-moz-placeholder { color: $c-shadow-darker; }
 		}
 
 		.btn {
