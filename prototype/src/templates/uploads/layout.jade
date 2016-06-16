@@ -1,39 +1,42 @@
 .content
-	.container-fluid
-		.breadcrumbs.row
-			a(href="index.html")
-				i.fa.fa-home
-			i.fa.fa-caret-right
-			b Uploads
-		.row
-			main.col-sm-8.col-sm-offset-2.document-viewer
-				.alert.alert-success
-					i.fa.fa-check
-					span Your document has been uploaded! Remember to update the required metadata.
-				.alert.alert-danger
-					i.fa.fa-close
-					span Sorry, the upload process failed.
-				.upload-box
-					p.upload-box_title 
-						i.fa.fa-upload
-						span Drag and drop your files
-					a.upload-box_link(href="uploads-document.html") or click here for browsing your local files
-					p.upload-box_files Supported formats: PDF
-				include content.jade
-	
-	include ../aside-metadata/content_text.jade
-	include modals.jade
-	
-	.float-btn.btn-fixed
-		.float-btn__sec
-			span Download
-			i.fa.fa-download
-		.float-btn__sec
-			span Delete
-			i.fa.fa-trash
-		.float-btn__sec
-			span Publish
-			i.fa.fa-eye
-		.float-btn__main.outside
-			span Edit
-			i.fa.fa-pencil
+  .container-fluid
+    .breadcrumbs.row
+      a(href="index.html")
+        i.fa.fa-home
+      i.fa.fa-caret-right
+      b Uploads
+    .row
+      main.col-sm-8.col-sm-offset-2.document-viewer
+        .alert.alert-success
+          i.fa.fa-check
+          span Your document has been uploaded! Remember to update the required metadata.
+        .alert.alert-danger
+          i.fa.fa-close
+          span Sorry, the upload process failed.
+        .upload-box
+          .upload-box_wrapper
+            i.upload-box_icon.fa.fa-upload
+            p.upload-box_title
+              span Drag and drop your files here
+            a.upload-box_link(href="uploads-document.html")
+              span.upload-box_or or
+              b.upload-box_cta Click here to browse your local files
+              span.upload-box_formats (supported formats: PDF)
+        include content.jade
+  
+  include ../aside-metadata/content_text.jade
+  include modals.jade
+  
+  .float-btn.btn-fixed
+    .float-btn__sec
+      span Download
+      i.fa.fa-download
+    .float-btn__sec
+      span Delete
+      i.fa.fa-trash
+    .float-btn__sec
+      span Publish
+      i.fa.fa-eye
+    .float-btn__main.outside
+      span Edit
+      i.fa.fa-pencil
