@@ -1,45 +1,45 @@
-aside.create-modal
-	h1 Create document reference
-	h2 Select relationship type
-		small 1
-	select.form-control
-		option Based on...
-		option Supports...
-		option Contradicts...
-	h2 Select document
-		small 2
-	.input-group
-		input.form-control(type="text", placeholder="Search document title")
-		span.input-group-addon
-			i.fa.fa-search
-	.item-group
-		each document in documents
-			li
-				.item
-					span.item-name= document.id+' '+document.name
-	//
-		ul.search__filter.search__filter--single__selection
-			li 
-			li 
-				i.fa
-				label Make relationship to the entire document
-		.btn.btn-success.btn-block.btn-save
-			i.fa.fa-save
-			|  Save reference
+aside.create-modal.col-xs-10.col-sm-4
+  h1 Create document reference
+  h2 Select relationship type
+    small 1
+  select.form-control
+    option Based on...
+    option Supports...
+    option Contradicts...
+  h2 Select document
+    small 2
+  .input-group
+    input.form-control(type="text", placeholder="Search document title")
+    span.input-group-addon
+      i.fa.fa-search
+  .item-group
+    each document in documents
+      li
+        .item
+          span.item-name= document.id+' '+document.name
+  //
+    ul.search__filter.search__filter--single__selection
+      li 
+      li 
+        i.fa
+        label Make relationship to the entire document
+    .btn.btn-success.btn-block.btn-save
+      i.fa.fa-save
+      |  Save reference
 
 .ref-modal
-	h1 Relationships
-	.item-group
-			li
-				.item
-					span.item-name 147 95 149 96 Sir Dawda K. Jawara Gambia (The)
-					p.item-snippets(style="display: block") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reprehenderit porro enim voluptas laudantium saepe accusantium! Deleniti ipsum, ipsa veniam necessitatibus aliquam eaque, perspiciatis assumenda fugit ex architecto itaque illo?
-					a.btn.btn-success 
-						i.fa.fa-chevron-right
-						| View snippet
-			li
-				.item
-					span.item-name 003 12 Peter Joseph Chacha v The United Republic of Tanzania
-					a.btn.btn-success 
-						i.fa.fa-chevron-right
-						| View full document
+  h1 Relationships
+  .item-group
+      li
+        .item
+          span.item-name 147 95 149 96 Sir Dawda K. Jawara Gambia (The)
+          p.item-snippets(style="display: block") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto reprehenderit porro enim voluptas laudantium saepe accusantium! Deleniti ipsum, ipsa veniam necessitatibus aliquam eaque, perspiciatis assumenda fugit ex architecto itaque illo?
+          a.btn.btn-success 
+            i.fa.fa-chevron-right
+            | View snippet
+      li
+        .item
+          span.item-name 003 12 Peter Joseph Chacha v The United Republic of Tanzania
+          a.btn.btn-success 
+            i.fa.fa-chevron-right
+            | View full document
