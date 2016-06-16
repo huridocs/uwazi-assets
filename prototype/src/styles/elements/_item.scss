@@ -1,8 +1,10 @@
 .item-group {
 	list-style-type: none;
 	@include desktop {
-		margin-left: -4px;
-		margin-right: -4px;
+    padding: 0 11px;
+    display: block;
+    margin: auto;
+    max-width: 960px;
 
 		li {
 			position: static;
@@ -164,8 +166,12 @@
 /* sort-by controller */
 
 .sort-by {
+  padding: 0 15px;
 	text-align: center;
 	@include desktop {
+    display: block;
+    margin: auto;
+    max-width: 960px;
 		text-align: right;
 		#documents-counter {
 			text-align: left;
