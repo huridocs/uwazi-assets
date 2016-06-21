@@ -3,3 +3,4 @@ prototype/node_modules/
 prototype/bower_components/
 prototype/.sass-cache/
 prototype/dist/
+prototype/src/data/
